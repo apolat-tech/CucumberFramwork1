@@ -35,6 +35,14 @@ public class AddUserStepDefinitions extends CommonMethods {
             }
         }
     }
+    @When("Enter {string}, {string},{string},{string},{string}")
+    public void enter(String login1, String fistName1, String lastName1, String email1, String ssn1) {
+addUserPage.addUser(login1,fistName1,lastName1,email1,ssn1);
+    }
+
+    @Then("verify {string} added successfully")
+    public void verify_added_successfully(String string) {
+        }
 
 
 }
